@@ -93,13 +93,13 @@ jobs:
         cp .config /workdir/config_file.config
 
     - name: Upload .config file as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: openwrt-config
         path: /workdir/config_file.config
 
     - name: Upload .config file to release
-      uses: svenstaro/upload-release-action@v3
+      uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.MY_TOKEN }}
         file: /workdir/config_file.config
