@@ -87,6 +87,11 @@ jobs:
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
 
+    - name: Save .config file
+      run: |
+        cd openwrt
+        cp .config /workdir/config_file.config
+
     - name: Upload .config file to release
       uses: svenstaro/upload-release-action@v2
       with:
