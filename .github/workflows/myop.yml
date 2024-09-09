@@ -91,8 +91,8 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.MY_TOKEN }}
-        file: .config
-        asset_name: config_file.config
+        file: ~/work/myop/myop/openwrt/config.txt
+        asset_name: configs.txt
         tag: ${{ github.run_id }}
         overwrite: true
         
