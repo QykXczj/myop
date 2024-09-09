@@ -93,7 +93,7 @@ jobs:
         cp .config /workdir/config_file.config
 
     - name: Upload .config file as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: openwrt-config
         path: /workdir/config_file.config
